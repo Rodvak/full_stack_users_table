@@ -1,0 +1,26 @@
+<!-- USERS CRUD -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <title>Show User</title>
+</head>
+
+<body>
+    <div class="container_show">
+            <h1>User {{user.id}}</h1>
+            <p>Full name {{user.first_name}}, {{user.last_name}}</p>
+            <p>Email {{user.email}}</p>
+            <p>Created On {{user.created_at}}</p>
+            <p>Last Updated On {{user.updated_at}}</p>
+            <a href="/edit_user/{{user.id}}">Edit User</a> |
+            <a href="/delete_user/{{user.id}}/delete">Delete</a>
+        </div>
+
+</body>
+
+</html>
+

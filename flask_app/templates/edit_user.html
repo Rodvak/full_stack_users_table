@@ -1,0 +1,30 @@
+<!-- USERS CRUD -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <title>Create</title>
+</head>
+<body>
+    <div class="container_edit">
+        <h1>Edit User {{user.id}}</h1>
+            <form action="/update_user" method="POST"> 
+            <input type="hidden" name="id" value="{{user.id}}">
+            <p>First Name</p>
+            <input type="text" name="first_name" class="text" value="{{user.first_name}}">
+            <p>Last Name</p>
+            <input type="text" name="last_name" class="text" value="{{user.last_name}}">
+            <p>Email</p>
+            <input type="text" name="email" class="text" value="{{user.email}}">
+                <div class="btn_div">
+                    <input type="submit" value="Update" name="create" class="btn">
+                </div>
+        </form>
+        <a id="show_user" href="/show_user/{{user.id}}">Show User</a> |
+        <a id="home" href="/">Home</a>
+    </div>
+</body>
+</html>
