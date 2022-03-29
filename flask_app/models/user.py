@@ -43,4 +43,6 @@ class User: # model the class after the User table from our database
     def delete_user(cls,data):
         query = "DELETE FROM users WHERE id = %(id)s;"
         connectToMySQL ('users_schema').query_db(query, data)
+        
+    
 

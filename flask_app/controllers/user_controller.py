@@ -50,3 +50,5 @@ def delete_user(id):
     print(request.form)
     User.delete_user({"id":id})
     return redirect('/')
+
+
